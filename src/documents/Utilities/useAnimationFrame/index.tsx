@@ -11,7 +11,7 @@ export default function UseAnimationFrameExample() {
     y: 0,
   });
 
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(true);
 
   const controls = useAnimationControls();
 
@@ -54,8 +54,9 @@ export default function UseAnimationFrameExample() {
       <div>
         <div>
           <button onClick={() => setIsAnimating((prev) => !prev)}>
-            Animation Stop
+            Animation {isAnimating ? 'Stop' : 'Start'}
           </button>
+          <span>🤔 다시 해보자.</span>
           <p>
             <code className={'font-bold'}>time</code>: the total duration of
             time since the{' '}
